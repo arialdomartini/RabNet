@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabNet", "RabNet\RabNet.csproj", "{F9EFBA3F-CF6F-463E-B4CA-6F7BE359A3DB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabNet.Test", "RabNet.Test\RabNet.Test.csproj", "{3BB9150D-F08C-44B2-8BEE-18F456BF7CBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{58F53C9B-4A96-470A-84C2-511ED3F6D2C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer", "Producer\Producer.csproj", "{B4D2B4AA-EB54-40DD-B030-033F2D15EC50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +17,13 @@ Global
 		{3BB9150D-F08C-44B2-8BEE-18F456BF7CBC}.Debug|x86.Build.0 = Debug|Any CPU
 		{3BB9150D-F08C-44B2-8BEE-18F456BF7CBC}.Release|x86.ActiveCfg = Release|Any CPU
 		{3BB9150D-F08C-44B2-8BEE-18F456BF7CBC}.Release|x86.Build.0 = Release|Any CPU
-		{F9EFBA3F-CF6F-463E-B4CA-6F7BE359A3DB}.Debug|x86.ActiveCfg = Debug|x86
-		{F9EFBA3F-CF6F-463E-B4CA-6F7BE359A3DB}.Debug|x86.Build.0 = Debug|x86
-		{F9EFBA3F-CF6F-463E-B4CA-6F7BE359A3DB}.Release|x86.ActiveCfg = Release|x86
-		{F9EFBA3F-CF6F-463E-B4CA-6F7BE359A3DB}.Release|x86.Build.0 = Release|x86
+		{58F53C9B-4A96-470A-84C2-511ED3F6D2C9}.Debug|x86.ActiveCfg = Debug|x86
+		{58F53C9B-4A96-470A-84C2-511ED3F6D2C9}.Debug|x86.Build.0 = Debug|x86
+		{58F53C9B-4A96-470A-84C2-511ED3F6D2C9}.Release|x86.ActiveCfg = Release|x86
+		{58F53C9B-4A96-470A-84C2-511ED3F6D2C9}.Release|x86.Build.0 = Release|x86
+		{B4D2B4AA-EB54-40DD-B030-033F2D15EC50}.Debug|x86.ActiveCfg = Debug|x86
+		{B4D2B4AA-EB54-40DD-B030-033F2D15EC50}.Debug|x86.Build.0 = Debug|x86
+		{B4D2B4AA-EB54-40DD-B030-033F2D15EC50}.Release|x86.ActiveCfg = Release|x86
+		{B4D2B4AA-EB54-40DD-B030-033F2D15EC50}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal

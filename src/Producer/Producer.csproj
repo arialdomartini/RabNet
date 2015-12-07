@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{F9EFBA3F-CF6F-463E-B4CA-6F7BE359A3DB}</ProjectGuid>
+    <ProjectGuid>{B4D2B4AA-EB54-40DD-B030-033F2D15EC50}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>RabNet</RootNamespace>
-    <AssemblyName>RabNet</AssemblyName>
+    <RootNamespace>Producer</RootNamespace>
+    <AssemblyName>Producer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -31,10 +31,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\packages\RabbitMQ.Client.3.5.6\lib\net40\RabbitMQ.Client.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
