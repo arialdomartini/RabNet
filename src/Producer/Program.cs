@@ -25,7 +25,7 @@ namespace Producer
                 {
                     channel.QueueDeclare(
                         queue: "hello",
-                        durable: false,
+                        durable: true,
                         exclusive: false,
                         autoDelete:false,
                         arguments: null
@@ -37,10 +37,13 @@ namespace Producer
                         var serializedMessage = JsonConvert.SerializeObject(message);
                         var body = Encoding.UTF8.GetBytes(serializedMessage);
 
+                        var properties = channel.CreateBasicProperties();
+                        properties.Persistent = true;
+
                         channel.BasicPublish(
                             exchange: "",
                             routingKey: "hello",
-                            basicProperties: null,
+                            basicProperties: properties,
                             body: body
                         );
                         Console.WriteLine(serializedMessage);

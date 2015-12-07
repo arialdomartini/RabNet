@@ -21,7 +21,7 @@ namespace Consumer
                 {
                     channel.QueueDeclare(
                         queue: "hello",
-                        durable: false,
+                        durable: true,
                         exclusive: false,
                         autoDelete:false,
                         arguments: null
@@ -34,11 +34,12 @@ namespace Consumer
                         var message = Encoding.UTF8.GetString(body);
                         var mymessage = JsonConvert.DeserializeObject<MyMessage>(message);
                         Console.WriteLine("Got: {0}/{1}", mymessage.Number, mymessage.TheMessage);
+                        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
                     };
 
                     channel.BasicConsume(
                         queue: "hello",
-                        noAck: true,
+                        noAck: false,
                         consumer: consumer
                     );
 
