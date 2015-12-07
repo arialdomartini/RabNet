@@ -3,6 +3,8 @@ using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 using System.Collections;
+using Producer;
+using Newtonsoft.Json;
 
 namespace Consumer
 {
@@ -30,7 +32,8 @@ namespace Consumer
                     consumer.Received += (model, ea) => {
                         var body = ea.Body;
                         var message = Encoding.UTF8.GetString(body);
-                        Console.WriteLine("Got: {0}", message);
+                        var mymessage = JsonConvert.DeserializeObject<MyMessage>(message);
+                        Console.WriteLine("Got: {0}/{1}", mymessage.Number, mymessage.TheMessage);
                     };
 
                     channel.BasicConsume(
