@@ -1,15 +1,14 @@
-﻿using GraspIt;
-using FluentAssertions;
+﻿using System;
 using NUnit.Framework;
 
-namespace GraspIt.Test
+namespace RabNet.Test
 {
     public class MyClassTest
     {
         [Test]
         public void ShouldPass()
         {
-            new MyClass().DoSomething().Should().BeTrue();
+            Assert.Pass();
         }
     }
 }
