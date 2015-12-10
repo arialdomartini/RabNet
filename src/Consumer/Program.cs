@@ -14,7 +14,9 @@ namespace Consumer
         {
             Console.WriteLine("Consuming messages");
 
-            var connectionFactory = new ConnectionFactory() { HostName = "192.168.99.100" };
+            int port = 5673;
+            var connectionFactory = new ConnectionFactory() { HostName = "192.168.99.100", Port = port };
+            Console.WriteLine("Using port {0}", port);
             using(var connection = connectionFactory.CreateConnection())
             {
                 using(var channel = connection.CreateModel())
